@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#333030"
+    android:drawingCacheQuality="high"
+    android:orientation="vertical"
+    android:theme="@style/AppTheme.NoActionBar"
+    tools:context=".VeveActivity">
+
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="80dp"
+        app:layout_constraintBottom_toTopOf="@+id/fragment_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="16dp"
+        android:background="@drawable/button_savememe_background"
+        android:drawableRight="?android:attr/textCheckMark"
+        android:paddingLeft="30dp"
+        android:paddingRight="20dp"
+        android:text="save"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="170dp"
+        android:layout_marginEnd="170dp"
+        app:layout_constraintBottom_toBottomOf="@+id/videoView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/videoView" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/memeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/videoView"
+        app:layout_constraintStart_toStartOf="@+id/videoView"
+        app:layout_constraintTop_toTopOf="@+id/videoView">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            android:hint="Click Here To Type Text....\"
+            android:padding="15dp"
+            android:textAlignment="viewStart"
+            android:textColor="#171616"
+            android:textColorHint="#555454"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <fragment
+        android:id="@+id/fragment_default"
+        class="com.veve.videomemegenerator.fragments.rangeseekbar_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fab" />.
+
+</androidx.constraintlayout.widget.ConstraintLayout>
